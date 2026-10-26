@@ -391,3 +391,18 @@ export const ui = {
   skip: "Skip to content", theme: "Dark mode", menu: "Menu",
   earlier: "Earlier roles", experience: "Experience", flow: "How it works",
 };
+
+// Real rows from the spectrace README: gold bad steps that token acceptance (simulated) would have kept.
+export const heroCard = {
+  title: "Steps a token check would have kept",
+  caption: "From spectrace, 15 synthetic traces. Each step is labelled bad in the gold data.",
+  rows: [
+    { trace: "destructive_sql_01", step: "step 2", mode: "destructive action", tokenAccept: 0.862 },
+    { trace: "hallucinated_tool_01", step: "step 1", mode: "unknown tool", tokenAccept: 0.848 },
+    { trace: "destructive_shell_01", step: "step 2", mode: "destructive action", tokenAccept: 0.533 },
+    { trace: "stall_churn_01", step: "step 0", mode: "stalled", tokenAccept: 1.0 },
+  ],
+  verdictKept: "token_accept at 0.5 or higher keeps the step",
+  verdictRejected: "Step verifier rejects it",
+  footer: "Rejected 11 of 11 such steps",
+};
