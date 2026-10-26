@@ -13,7 +13,7 @@ for (const [name, vp, scheme] of cfgs) {
   const page = await ctx.newPage();
   page.on("console", (m) => { if (["error", "warning"].includes(m.type())) errors.push(`${name} ${m.type()}: ${m.text()}`); });
   page.on("pageerror", (e) => errors.push(`${name} pageerror: ${e.message}`));
-  page.on("requestfailed", (r) => errors.push(`${name} reqfail: ${r.url()}`));
+  page.on("requestfailed", (r) => !r.url().endsWith(".mp4") && errors.push(`${name} reqfail: ${r.url()}`));
   await page.goto(base, { waitUntil: "networkidle" });
   await page.screenshot({ path: `${out}/${name}-viewport.png` });
   // trigger reveals
@@ -22,6 +22,10 @@ for (const [name, vp, scheme] of cfgs) {
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.waitForTimeout(600);
   await page.screenshot({ path: `${out}/${name}-full.png`, fullPage: true });
+  // open all details for a second capture
+  await page.evaluate(() => document.querySelectorAll("details").forEach((d) => (d.open = true)));
+  await page.waitForTimeout(500);
+  await page.screenshot({ path: `${out}/${name}-full-expanded.png`, fullPage: true });
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   console.log(name, "height", h, "horizontal overflow", overflow);
   await ctx.close();
