@@ -393,7 +393,7 @@ export const ui = {
   backToTop: "Back to top", logScale: "Log scale", technical: "Technical details", caveats: "Honest caveats", whatItIs: "What it is",
   abstract: "Read the abstract", pdf: "Download PDF", skills: "Skills", education: "Education", selectedProjects: "Selected projects", workLabel: "Work",
   previousScreenshot: "Previous screenshot", nextScreenshot: "Next screenshot", tokenAccept: "token_accept",
-  earlier: "Earlier roles", experience: "Experience", flow: "How it works",
+  earlier: "Earlier roles", experience: "Experience", flow: "How it works", diagram: "Diagram",
 };
 
 // Real rows from the spectrace README: gold bad steps that token acceptance (simulated) would have kept.

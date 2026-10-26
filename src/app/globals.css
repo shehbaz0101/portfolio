@@ -1135,9 +1135,11 @@ h1 {
   gap:12px
 }
 .link-note {
-  max-width:155px;
-  margin-top:8px;
-  font-size:10px
+  display:flex;
+  align-items:baseline;
+  gap:7px;
+  margin-top:10px;
+  font-size:12px
 }
 .media-frame {
   border:1px solid var(--line);
@@ -1723,9 +1725,9 @@ table,.callout,.paper-meta,.gallery figcaption,.repo-card p,.education-card>p,
 .glance-row:hover:before,.glance-row:focus-visible:before {transform:scaleY(1)}
 .glance-row:focus-visible {outline-offset:-4px}
 .details-body:not(.abstract) {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;padding-top:26px}
-.details-body>.chips {grid-column:1/-1;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+.details-body>.chips {grid-column:1/-1;margin:0;display:flex;flex-wrap:wrap;align-items:start}
 .details-body .detail-section {margin:0;min-width:0}
-.details-body>.table-scroll,.details-body>.callout {grid-column:1/-1;margin:0}
+.details-body>.table-shell,.details-body>.callout {grid-column:1/-1;margin:0}
 .table-scroll {max-height:460px;overflow:auto;border:1px solid var(--line);border-radius:8px;isolation:isolate}
 caption {padding:16px;margin:0;background:var(--canvas)}
 thead th {position:sticky;top:0;z-index:1;background:var(--surface)}
@@ -1751,10 +1753,38 @@ thead th {position:sticky;top:0;z-index:1;background:var(--surface)}
   .chart-row,.chart-pair .chart-row {grid-template-columns:minmax(0,1fr) 80px;gap:10px 14px}
   .chart-heading {align-items:start;flex-direction:column;gap:8px}
   .details-body:not(.abstract) {grid-template-columns:1fr;gap:24px;padding:22px 18px}
-  .details-body>.chips {grid-template-columns:1fr}
   .hero .stat-card {grid-template-columns:1fr;gap:10px}
   .hero .stat-value {margin:0}
   .work-wrapper>.project-section:first-of-type {padding-top:32px}
   .hero-eyebrow {font-size:12.5px}
   .footer-bottom {align-items:start}
+}
+
+/* Project media, disclosures, and compact results */
+.project-header>*,.video-player,.gallery,.table-shell {min-width:0}
+.link-note svg {width:14px;height:14px;flex:0 0 14px;align-self:center;stroke:currentColor;stroke-width:1.5}
+.link-note {font-size:12px;line-height:1.6}
+.video-player video {max-width:100%;height:auto;object-fit:contain}
+.video-player figcaption {align-items:baseline;flex-wrap:wrap;gap:4px 16px}
+.video-player figcaption .video-caption {white-space:normal;flex:1 1 220px;overflow-wrap:anywhere}
+.video-player figcaption .mono {flex:0 0 auto}
+.detail-section .how-list {margin-top:16px}
+.table-shell {position:relative}
+.table-shell .table-scroll {margin:0}
+summary:focus-visible {outline:3px solid var(--accent);outline-offset:-4px;border-radius:8px}
+.gallery button:focus-visible {outline:3px solid var(--accent);outline-offset:2px;position:relative;z-index:2}
+@media(max-width:760px) {
+  .button,.icon-button {min-height:44px}
+  .icon-button {min-width:44px}
+  .gallery-controls {gap:8px}
+  .gallery-controls>.icon-button {width:44px;height:44px}
+  .thumbnails {overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;gap:8px;padding:5px;margin:-5px 0;scroll-padding-inline:5px}
+  .thumbnails button {flex:0 0 76px;min-height:44px;scroll-snap-align:center;padding:3px}
+  .table-shell:after {content:'';position:absolute;right:1px;top:1px;bottom:1px;width:12px;background:linear-gradient(to right,transparent,color-mix(in srgb,var(--secondary) 18%,var(--canvas)));pointer-events:none;border-radius:0 7px 7px 0}
+  .table-scroll table {font-size:12px;line-height:1.5}
+  .table-scroll th,.table-scroll td {min-width:0;padding:9px 6px;vertical-align:top}
+  .table-scroll th {overflow-wrap:anywhere}
+  .table-scroll td {white-space:nowrap}
+  .table-scroll caption {padding:12px;font-size:12px;overflow-wrap:anywhere}
+  .details-body .callout {padding:18px}
 }
