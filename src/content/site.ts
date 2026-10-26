@@ -64,7 +64,7 @@ export const hero = {
 
 export const glance = {
   title: "The 30 second version",
-  lead: "My day job, four open source projects, a paper and a private product. Each row jumps to the full story.",
+  lead: "My day job, three open source projects, a paper and a private product. Each row jumps to the full story.",
   rows: [
     { id: "opentrons", name: "Opentrons assistant", what: "Turns a scientist's plain English lab method into robot code, and only releases code that passes the simulator.", result: "82 tests, up to 3 self repair attempts" },
     { id: "spectrace", name: "spectrace", what: "A test bench that checks whether an AI agent's step was a good idea, not just fluent text.", result: "Caught 11 of 11 harmful steps" },
@@ -381,4 +381,13 @@ export const education = [
 export const contact = {
   title: "Let's talk",
   text: "I am looking for AI engineering roles in New York and San Francisco. The fastest way to reach me is email.",
+};
+
+// Interface labels for the portfolio controls.
+export const ui = {
+  nav: [{ label: "Work", href: "#work" }, { label: "Paper", href: "#paper" }, { label: "Experience", href: "#opentrons" }, { label: "Contact", href: "#contact" }],
+  resume: "Resume", download: "Download resume", work: "View work",
+  github: "GitHub", linkedin: "LinkedIn", email: "Email",
+  skip: "Skip to content", theme: "Dark mode", menu: "Menu",
+  earlier: "Earlier roles", experience: "Experience", flow: "How it works",
 };
