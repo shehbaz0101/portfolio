@@ -1,0 +1,12 @@
+import { chromium } from "playwright-core";
+const b = await chromium.launch({ executablePath: "/usr/bin/google-chrome", args: ["--no-sandbox"] });
+const p = await b.newPage();
+const errs=[]; p.on("console",m=>{if(m.type()=="error")errs.push(m.text())});
+await p.goto("http://localhost:4173",{waitUntil:"load"});
+await p.waitForTimeout(1500);
+const r = await p.evaluate(async()=>[...document.querySelectorAll("video")].map(v=>({src:v.currentSrc.split('/').pop(),rs:v.readyState,d:v.duration,err:v.error&&v.error.code})));
+console.log(JSON.stringify(r), errs);
+const v = await p.$("video"); await v.scrollIntoViewIfNeeded(); await p.evaluate(()=>{const v=document.querySelector("video"); v.muted=true; return v.play()});
+await p.waitForTimeout(2500);
+console.log(await p.evaluate(()=>document.querySelector("video").currentTime));
+await b.close();

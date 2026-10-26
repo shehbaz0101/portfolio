@@ -1,0 +1,4 @@
+import { heroCard, ui } from '@/content/site';
+export function HeroCard() {
+  return <aside className="hero-card" aria-labelledby="hero-card-title"><div className="hero-card-heading"><p className="eyebrow">{heroCard.title}</p><p id="hero-card-title">{heroCard.caption}</p></div><div>{heroCard.rows.map(row => <div className="trace-row" key={row.trace}><div className="trace-name"><span>{row.trace}</span><small>{row.step}</small></div><span className="failure-chip">{row.mode}</span><div className="token-line"><span title={heroCard.verdictKept}>{ui.tokenAccept}</span><div className="token-track"><i style={{ width: `${row.tokenAccept * 100}%` }}/></div><span>{row.tokenAccept.toFixed(3)}</span></div><p className="verdict"><span aria-hidden="true">✓</span>{heroCard.verdictRejected}</p></div>)}</div><p className="hero-card-footer">{heroCard.footer}</p></aside>;
+}

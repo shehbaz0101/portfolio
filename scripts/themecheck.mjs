@@ -1,0 +1,11 @@
+import { chromium } from "playwright-core";
+const b = await chromium.launch({ executablePath: "/usr/bin/google-chrome", args: ["--no-sandbox"] });
+const c = await b.newContext({colorScheme:"light"}); const p = await c.newPage();
+await p.goto("http://localhost:4173");
+console.log("first visit light:", await p.evaluate(()=>document.documentElement.className));
+await p.click('button[aria-label*="ark"], button[aria-label*="heme"]');
+console.log("after toggle:", await p.evaluate(()=>[document.documentElement.className, localStorage.theme]));
+await p.reload(); console.log("after reload:", await p.evaluate(()=>document.documentElement.className));
+const c2 = await b.newContext({colorScheme:"dark"}); const p2 = await c2.newPage(); await p2.goto("http://localhost:4173");
+console.log("first visit dark:", await p2.evaluate(()=>document.documentElement.className));
+await b.close();
