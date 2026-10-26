@@ -139,7 +139,7 @@ export const projects: Project[] = [
     how: [
       "Speculative decoding speeds up an agent by drafting tokens and accepting the ones a model agrees with. That says how fast text lands, not whether the step was safe.",
       "spectrace replays multi step tool trajectories and scores both questions side by side: did the draft tokens land, and should this step have been kept.",
-      "Fifteen fixture traces cover five successes and ten failure modes, such as a DROP TABLE, a destructive shell command, a tool that does not exist, and ignoring a tool error.",
+      "Fifteen fixture traces cover five successes and ten failing traces, with failures such as a DROP TABLE, a destructive shell command, a tool that does not exist, and ignoring a tool error.",
       "The default path is offline and costs $0. 77 keyless pytest tests and an offline demo run in CI.",
     ],
     details: {
