@@ -84,7 +84,7 @@ export const experience = {
   place: "New York, NY",
   period: "Aug 2026 to Present",
   whatItIs:
-    "A production assistant that lets a scientist describe a lab method in plain English and get runnable code for Opentrons OT 2 and Flex liquid handling robots.",
+    "A production assistant that lets a scientist describe a lab method in plain English and get runnable code for Opentrons OT-2 and Flex liquid handling robots.",
   how: [
     "Shipped the assistant with OpenRouter, FastAPI and Docker. When a detail is missing, it asks a clarifying question instead of guessing.",
     "Built guardrails against hallucinated hardware. The model is grounded in Opentrons' official labware and pipette catalog, and its output is constrained to a structured JSON plan schema that covers 13 liquid handling commands.",
@@ -95,7 +95,7 @@ export const experience = {
     columns: [
       { title: "Ask", nodes: [{ label: "Scientist's plain English method", tone: "muted" }, { label: "Clarifying questions", sub: "when details are missing", tone: "accent" }] },
       { title: "Plan", nodes: [{ label: "Structured JSON plan", sub: "13 liquid handling commands", tone: "accent" }, { label: "Official catalog", sub: "labware and pipettes ground the model", tone: "muted" }] },
-      { title: "Generate", nodes: [{ label: "Protocol API code", sub: "for OT 2 and Flex", tone: "accent" }] },
+      { title: "Generate", nodes: [{ label: "Protocol API code", sub: "for OT-2 and Flex", tone: "accent" }] },
       { title: "Verify", nodes: [{ label: "Simulator", sub: "pass releases the code", tone: "good" }, { label: "Deterministic fallback", sub: "if the LLM is down", tone: "warn" }] },
     ],
     loopBack: { from: 3, to: 2, label: "Repair loop, up to 3 attempts" },
@@ -272,7 +272,7 @@ export const paper = {
   index: "04",
   id: "paper",
   title: "Small Errors, Large Residuals",
-  subtitle: "Calibrating PDE Residual Checks for Neural Surrogates",
+  subtitle: "Calibrating PDE-Residual Checks for Neural Surrogates",
   author: "Shehbaz Pathan, Independent",
   status: "Preprint, 21 pages, 5 figures",
   plain:
@@ -280,7 +280,7 @@ export const paper = {
   abstract:
     "Neural surrogates for partial differential equations (PDEs) are often declared physically inconsistent when a finite difference (strong form) residual of their output exceeds a fixed threshold. We show that such checks conflate how rough the error is, the grid on which the residual is evaluated, and actual violation of the physics. For a linear PDE the strong form residual of a prediction equals the residual of its error, a symbol weighted norm whose gain for uncorrelated error grows like 1/h^2 and 1/dt, while a weak form residual is bounded by the relative L2 error times a roughness independent constant. We propose reporting either residual as a noise calibrated ratio C: the residual divided by the median residual of a smooth error of the same relative L2 on the same grid.",
   findings: [
-    { value: "0.875 to 14.4", label: "heat strong form residual when the grid goes from 16 to 48 points per side, while the weak form residual stays between 0.000447 and 0.000596" },
+    { value: "0.875 to 14.4", label: "heat strong form residual when the grid goes from 16 to 48 points per side, while the weak form residual stays between 4.47e-4 and 5.96e-4" },
     { value: "0.41 to 0.48", label: "weak form C of three shipped FNO and PINO checkpoints that a fixed strong form cut of 1 flags as untrusted, below the smooth error median" },
     { value: "9 of 30 vs 0", label: "low viscosity instances where a pointwise strong form estimator fails, against a weak form estimator" },
   ],
@@ -291,8 +291,8 @@ export const paper = {
     rows: [
       { label: "Strong form, 16 points", value: 0.875, display: "0.875", tone: "warn" },
       { label: "Strong form, 48 points", value: 14.4, display: "14.4", tone: "warn" },
-      { label: "Weak form, 16 points", value: 0.000596, display: "0.000596", tone: "good" },
-      { label: "Weak form, 48 points", value: 0.000447, display: "0.000447", tone: "good" },
+      { label: "Weak form, 16 points", value: 5.96e-4, display: "5.96e-4", tone: "good" },
+      { label: "Weak form, 48 points", value: 4.47e-4, display: "4.47e-4", tone: "good" },
     ],
   } as BarChart,
   chart2: {
@@ -307,7 +307,7 @@ export const paper = {
   } as BarChart,
   caveat: "Small scale by design: two PDEs on coarse grids, CPU trained models, and every number comes from committed score files under frozen protocols. A small weak form residual does not certify a correct solution.",
   pdf: "/docs/small-errors-large-residuals.pdf",
-  also: "Also on my resume: The Illusion of Success: Trajectory Level Evaluation for Enterprise Workflow Agents, under review.",
+  also: "Also on my resume: The Illusion of Success: Trajectory-Level Evaluation for Enterprise Workflow Agents, under review.",
 };
 
 export const pera = {
@@ -362,14 +362,14 @@ export const more = {
   items: [
     { name: "wirejournal", text: "Crash proof agent runs: a drop in proxy that resumes a killed agent where it stopped, without re billing finished LLM calls or repeating side effecting tool calls.", href: "https://github.com/shehbaz0101/wirejournal" },
     { name: "claimforge", text: "Verifies scientific claims against OpenAlex, arXiv and Semantic Scholar evidence as support, refute or insufficient, with a rubric judge and offline gold set evals.", href: "https://github.com/shehbaz0101/claimforge" },
-    { name: "worldforge", text: "A latent world model that learns Lotka Volterra dynamics, rolls out predictions and plans with CEM, scored by open loop MSE and closed loop regret.", href: "https://github.com/shehbaz0101/worldforge" },
-    { name: "caraxes", text: "Physical AI for the 3D IC and package thermal inner loop. The solver stays the judge.", href: "https://github.com/shehbaz0101/caraxes" },
+    { name: "worldforge", text: "A latent world model that learns Lotka-Volterra dynamics, rolls out predictions and plans with CEM, scored by open loop MSE and closed loop regret.", href: "https://github.com/shehbaz0101/worldforge" },
+    { name: "caraxes", text: "Physical AI for the 3D-IC and package thermal inner loop. The solver stays the judge.", href: "https://github.com/shehbaz0101/caraxes" },
   ],
 };
 
 export const skills = [
   { group: "LLMs and agents", items: ["Agentic AI", "LangGraph", "LangChain", "RAG", "Vector search", "Reranking", "LLM evals", "Speculative decoding", "Fine tuning"] },
-  { group: "ML and deep learning", items: ["PyTorch", "Hugging Face", "FSDP and DDP", "PINNs", "Neural operators (FNO)", "TensorFlow", "Scikit learn", "XGBoost", "LightGBM"] },
+  { group: "ML and deep learning", items: ["PyTorch", "Hugging Face", "FSDP and DDP", "PINNs", "Neural operators (FNO)", "TensorFlow", "Scikit-learn", "XGBoost", "LightGBM"] },
   { group: "Infra and MLOps", items: ["Python", "SQL", "TypeScript", "FastAPI", "Docker", "Kubernetes", "AWS (S3, SageMaker)", "MLflow", "CI/CD with GitHub Actions"] },
   { group: "Data and BI", items: ["PostgreSQL", "ChromaDB", "MongoDB", "Tableau", "Power BI", "DAX", "Statistical modeling", "Time series forecasting", "A/B testing"] },
 ];
