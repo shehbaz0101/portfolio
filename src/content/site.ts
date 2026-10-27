@@ -47,13 +47,26 @@ export const site = {
 };
 
 export const hero = {
+  "status": "Open to AI engineering roles in New York and San Francisco",
+  "role": "AI/ML Engineer",
+  "value": "I build LLM agents that get checked before they act, and I test scientific ML models honestly. At Opentrons I turn a scientist's plain English into lab robot code that a simulator has verified.",
+  "current": { "label": "Currently", "text": "AI Engineer at Opentrons, New York", "when": "Aug 2026 to present" },
+  "featuredTitle": "Featured work",
+  "featured": [
+    { "id": "pera", "name": "pera.ai", "line": "A multi agent research terminal for private credit desks. Every figure is cited." },
+    { "id": "coticula", "name": "Coticula", "line": "A report card that asks if a physics AI understands the equation or only its data." },
+    { "id": "pinnforge", "name": "PINNForge", "line": "Recovers a hidden fluid property and measures when a neural network beats a solver." },
+    { "id": "spectrace", "name": "spectrace", "line": "Checks whether an AI agent's step was a good idea, not just fluent text." }
+  ],
+  "stackLabel": "Built with",
+  "stack": ["Python", "PyTorch", "FastAPI", "LangGraph", "RAG", "Docker", "TypeScript", "SQL", "AWS", "MLflow"],
   "eyebrow": "AI Engineer at Opentrons, New York",
   "headline": "I build LLM agents that get checked before they act.",
   "sub": "At Opentrons I ship an assistant that turns a scientist's plain English into lab robot code, and releases only what a simulator has verified. Outside work I build open source tools that test agents and scientific ML models honestly, including the cases where my own models lose.",
   "stats": [
     {
       "value": "82",
-      "label": "regression tests gate the Opentrons assistant, including 5 golden evals run in the simulator"
+      "label": "regression tests gate the Opentrons assistant"
     },
     {
       "value": "3.4% versus 34.9%",
@@ -61,7 +74,7 @@ export const hero = {
     },
     {
       "value": "0.017 versus 0.234",
-      "label": "Coticula heat trajectory change: shipped FNO barely moves when diffusivity is scaled 1.5; the classical solver does"
+      "label": "Coticula heat trajectory change, shipped FNO versus classical solver"
     }
   ]
 };
