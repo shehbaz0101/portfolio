@@ -42,7 +42,7 @@ export const site = {
   role: "AI Engineer",
   company: "Opentrons",
   location: "New York, NY",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-teal-sigma-90.vercel.app",
   email: "shehbazp001@gmail.com",
   linkedin: "https://www.linkedin.com/in/shbzpathan",
   github: "https://github.com/shehbaz0101",
