@@ -65,8 +65,8 @@ if (run("video")) {
   await page.waitForTimeout(2500);
   await page.mouse.move(1000, 300); await page.waitForTimeout(500); await page.mouse.move(400, 500, { steps: 30 }); await page.waitForTimeout(800);
   const h = await page.evaluate(() => document.documentElement.scrollHeight - innerHeight);
-  const steps = 90;
-  for (let i = 1; i <= steps; i++) { await page.mouse.wheel(0, h / steps * 1.0); await page.waitForTimeout(100); if (i % 6 === 0) await page.mouse.move(300 + (i * 37) % 800, 300 + (i * 53) % 400, { steps: 5 }); }
+  const steps = 70;
+  for (let i = 1; i <= steps; i++) { await page.mouse.wheel(0, h / steps * 1.0); await page.waitForTimeout(170); if (i % 6 === 0) await page.mouse.move(300 + (i * 37) % 800, 300 + (i * 53) % 400, { steps: 5 }); }
   await page.waitForTimeout(1200);
   const v = page.video(); await ctx.close(); await v.saveAs(`/tmp/vid/${prefix}-scroll.webm`);
 }
