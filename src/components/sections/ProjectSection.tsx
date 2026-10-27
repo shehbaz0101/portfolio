@@ -14,17 +14,17 @@ export function Bullets({ items }: { items: string[] }) {
   return <ul className="how-list">{items.map(item => <li key={item}>{item}</li>)}</ul>;
 }
 export function Metrics({ items }: { items: Project['metrics'] }) {
-  return <div className="stats metric-grid">{items.map(item => <Reveal key={item.value}><div className="stat-card"><p className="stat-value">{item.value}</p><p>{item.label}</p></div></Reveal>)}</div>;
+  return <div className="stats metric-grid">{items.map((item, index) => <Reveal key={item.value} delay={index * 90}><div className="stat-card"><p className="stat-value">{item.value}</p><p>{item.label}</p></div></Reveal>)}</div>;
 }
 export function ProjectSection({ project: p, band }: { project: Project; band: boolean }) {
   const details = p.details;
   return <section id={p.id} aria-labelledby={`${p.id}-title`} className={`section project-section ${band ? 'band' : ''}`}>
     <div className="container">
-      <Reveal><header className="project-header">
+      <header className="project-header"><Reveal className="reveal-stagger">
         <p className="eyebrow">{p.index}</p><h2 id={`${p.id}-title`}>{p.name}</h2>
         <p className="project-lead">{p.summary}</p><Chips items={[p.status, ...p.tags.slice(0, 4)]}/>
         {p.meta && <dl className="meta-row">{p.meta.map(m => <div key={m.label}><dt>{m.label}</dt><dd>{m.value}</dd></div>)}</dl>}
-      </header></Reveal>
+      </Reveal></header>
       {(p.whatItIs || p.links.length > 0 || p.video || p.shots) && <div className={`project-overview ${p.video || p.shots ? 'has-media' : ''}`}>
         <Reveal>{p.whatItIs && <><h3>{ui.whatItIs}</h3><p className="overview-copy">{p.whatItIs}</p></>}
           {p.links.length > 0 && <div className="link-buttons">{p.links.map((link, index) => <Button key={link.href} href={link.href} variant={index === 0 ? 'primary' : 'secondary'} target="_blank" rel="noopener noreferrer" download={link.download}>{link.label}{link.download ? <ArrowDown/> : <ArrowUpRight/>}</Button>)}</div>}
