@@ -23,6 +23,7 @@ export function ProjectSection({ project: p, band }: { project: Project; band: b
       <Reveal><header className="project-header">
         <p className="eyebrow">{p.index}</p><h2 id={`${p.id}-title`}>{p.name}</h2>
         <p className="project-lead">{p.summary}</p><Chips items={[p.status, ...p.tags.slice(0, 4)]}/>
+        {p.meta && <dl className="meta-row">{p.meta.map(m => <div key={m.label}><dt>{m.label}</dt><dd>{m.value}</dd></div>)}</dl>}
       </header></Reveal>
       {(p.whatItIs || p.links.length > 0 || p.video || p.shots) && <div className={`project-overview ${p.video || p.shots ? 'has-media' : ''}`}>
         <Reveal>{p.whatItIs && <><h3>{ui.whatItIs}</h3><p className="overview-copy">{p.whatItIs}</p></>}

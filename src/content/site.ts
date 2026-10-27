@@ -25,6 +25,7 @@ export type Project = {
   id: string; index: string; name: string; summary: string; status: string;
   whatItIs?: string; tags: string[]; metrics: { value: string; label: string }[];
   metricNote?: string;
+  meta?: { label: string; value: string }[];
   video?: { src: string; poster: string; length: string; caption: string };
   shots?: { src: string; alt: string; caption: string }[]; shotNote?: string;
   flow?: FlowSpec; chart?: BarChart; how?: string[];
@@ -1059,10 +1060,20 @@ export const projects: Project[] = [
     },
     "links": [
       {
-        "label": "Download PDF",
-        "href": "/docs/small-errors-large-residuals.pdf",
-        "download": true
+        "label": "Read the paper (PDF)",
+        "href": "/docs/small-errors-large-residuals.pdf"
+      },
+      {
+        "label": "Source and code",
+        "href": "https://github.com/shehbaz0101/coticula/tree/main/paper_artifacts",
+        "note": "Score files and tables behind the paper are in the Coticula repo under paper_artifacts. The viscosity inverse score files are in the PINNForge repo under docs/research."
       }
+    ],
+    "meta": [
+      { "label": "Title", "value": "Small Errors, Large Residuals: Calibrating PDE-Residual Checks for Neural Surrogates" },
+      { "label": "Author", "value": "Shehbaz Pathan, Independent" },
+      { "label": "Length", "value": "21 pages, 5 figures" },
+      { "label": "Categories", "value": "cs.LG primary, physics.comp-ph cross list" }
     ],
     "index": "05",
     "summary": "Calibrate physics residual checks to account for error roughness and grid resolution.",
