@@ -210,12 +210,11 @@ export const experience = {
     {
       "role": "AI Automation Engineer Intern",
       "company": "Rocket Autoparts",
-      "place": "Remote",
+      "place": "Albuquerque, NM (Remote)",
       "period": "Feb 2026 to May 2026",
       "points": [
-        "Replaced manual handoffs in 3 core workflows (supply chain, inventory, logistics) with LLM integrated automation.",
         "Cut order error rates 15% across tracked SKUs with ML forecasting and anomaly detection on fulfillment bottlenecks.",
-        "Parsed unstructured emails and order forms into structured records for decision engines."
+        "Replaced manual handoffs in 3 core supply chain, inventory, and logistics workflows with LLM automation, including parsing unstructured emails and order forms into structured records."
       ]
     },
     {
@@ -224,8 +223,8 @@ export const experience = {
       "place": "New York, NY",
       "period": "Jun 2025 to Aug 2025",
       "points": [
-        "Cut manual processing time about 40% and report turnaround from 2 days to under 4 hours by automating Salesforce reporting in Python.",
-        "Delivered Power BI dashboards on 15+ KPIs, adopted as the permanent leadership reporting layer for 3 consulting engagements."
+        "Cut report turnaround from 2 days to under 4 hours (about 40% less manual processing) by automating Salesforce reporting and CRM ingestion, deduplication, and enrichment in Python for 5+ client accounts.",
+        "Built Power BI dashboards on 15+ KPIs, adopted as the permanent leadership reporting layer for 3 consulting engagements."
       ]
     },
     {
@@ -235,7 +234,7 @@ export const experience = {
       "period": "Jun 2022 to Jan 2024",
       "points": [
         "Guided roadmap priorities over 3 product cycles with regression and significance tests on 500K+ row datasets for 10+ clients.",
-        "Saved about 8 analyst hours per week by automating reporting, with Tableau and Power BI dashboards adopted as the single source of truth."
+        "Saved about 8 analyst hours per week by automating reporting."
       ]
     }
   ]
@@ -1162,59 +1161,62 @@ export const more = {
 
 export const skills = [
   {
-    "group": "LLMs and agents",
+    "group": "Agents and evaluation",
     "items": [
       "Agentic AI",
-      "LangGraph",
-      "LangChain",
+      "LLM and agent evaluation",
+      "Trajectory level grading",
+      "Speculative decoding",
       "RAG",
       "Vector search",
       "Reranking",
-      "LLM evals",
-      "Speculative decoding",
-      "Fine tuning"
+      "Fine tuning",
+      "LangGraph",
+      "LangChain"
     ]
   },
   {
-    "group": "ML and deep learning",
+    "group": "Machine learning",
     "items": [
       "PyTorch",
-      "Hugging Face",
+      "Hugging Face Transformers",
       "FSDP and DDP",
-      "PINNs",
-      "Neural operators (FNO)",
+      "Fourier Neural Operators (FNO and PINO)",
+      "Physics Informed Neural Networks (PINNs)",
       "TensorFlow",
-      "Scikit-learn",
+      "scikit-learn",
       "XGBoost",
       "LightGBM"
     ]
   },
   {
-    "group": "Infra and MLOps",
+    "group": "Engineering",
     "items": [
       "Python",
       "SQL",
       "TypeScript",
+      "R",
       "FastAPI",
-      "Docker",
-      "Kubernetes",
+      "Pydantic",
+      "pytest",
+      "GitHub Actions",
+      "CI/CD",
       "AWS (S3, SageMaker)",
       "MLflow",
-      "CI/CD with GitHub Actions"
+      "PostgreSQL",
+      "ChromaDB",
+      "MongoDB"
     ]
   },
   {
-    "group": "Data and BI",
+    "group": "Analytics",
     "items": [
-      "PostgreSQL",
-      "ChromaDB",
-      "MongoDB",
-      "Tableau",
-      "Power BI",
-      "DAX",
       "Statistical modeling",
+      "Significance testing",
+      "A/B testing",
       "Time series forecasting",
-      "A/B testing"
+      "Tableau",
+      "Power BI"
     ]
   }
 ];
@@ -1224,13 +1226,13 @@ export const education = [
     "degree": "M.S. in Data Analytics and Visualization",
     "school": "Yeshiva University, New York, NY",
     "when": "May 2026",
-    "note": "GPA 4.0 of 4.0. Machine Learning, Deep Learning, NLP, Time Series, Data Engineering."
+    "note": "GPA 4.0/4.0. Coursework: Machine Learning, Deep Learning, NLP, Time Series, Data Engineering."
   },
   {
     "degree": "B.S. in Computer Applications",
     "school": "BAMU University, Pune, India",
     "when": "May 2022",
-    "note": "GPA 3.8 of 4.0."
+    "note": "GPA 3.8/4.0."
   }
 ];
 
@@ -1276,6 +1278,7 @@ export const ui = {
   ],
   "resume": "Resume",
   "download": "Download resume",
+  "view": "View resume",
   "work": "View work",
   "github": "GitHub",
   "linkedin": "LinkedIn",

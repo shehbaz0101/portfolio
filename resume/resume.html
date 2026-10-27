@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Shehbaz Pathan | AI/ML Engineer | Resume</title>
+<meta name="author" content="Shehbaz Pathan">
+<style>
+@font-face { font-family: "Inter"; src: url("Inter-400.ttf") format("truetype"); font-weight: 400; }
+@font-face { font-family: "Inter"; src: url("Inter-500.ttf") format("truetype"); font-weight: 500; }
+@font-face { font-family: "Inter"; src: url("Inter-600.ttf") format("truetype"); font-weight: 600; }
+@font-face { font-family: "Inter"; src: url("Inter-700.ttf") format("truetype"); font-weight: 700; }
+@font-face { font-family: "Inter"; src: url("Inter-750.ttf") format("truetype"); font-weight: 750; }
+@page { size: 8.5in 11in; margin: 0; }
+:root { --accent: #554ce0; --ink: #0a2540; --muted: #425466; --line: #dfe3ee; --tint: #f1f0fe; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #fff; }
+body { font-family: "Inter", Arial, sans-serif; font-size: 9pt; line-height: 1.255; color: var(--ink); width: 8.5in; height: 11in; padding: 0.32in 0.5in 0.25in; overflow: hidden;  }
+header { padding-bottom: 7px; border-bottom: 2.5px solid var(--accent); margin-bottom: 2px; }
+h1 { font-size: 23pt; font-weight: 750; letter-spacing: -0.02em; line-height: 1.1; }
+h1 span { color: var(--accent); }
+.namerow { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.tagline { text-align: right; font-size: 9.6pt; font-weight: 600; color: var(--accent); }
+.contact { margin-top: 3px; font-size: 8.6pt; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0 4px; }
+.contact a { color: var(--ink); text-decoration: none; font-weight: 500; }
+.contact .sep { color: var(--accent); font-weight: 700; padding: 0 3px; }
+h2 { font-size: 8.8pt; font-weight: 750; letter-spacing: 0; text-transform: uppercase; color: var(--accent); margin: 7px 0 3px; padding-bottom: 2px; line-height: 1.2; border-bottom: 1px solid var(--line); }
+p.summary { color: var(--ink); }
+.role { margin-top: 3px; break-inside: avoid; }
+.role:first-of-type { margin-top: 0; }
+.row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.title { font-weight: 700; font-size: 9.4pt; }
+.org { font-weight: 550; color: var(--muted); }
+.date { font-weight: 600; color: var(--accent); white-space: nowrap; font-size: 8.8pt; }
+.stack { font-weight: 500; color: var(--muted); font-size: 8.4pt; }
+.stack a { color: var(--accent); text-decoration: none; font-weight: 600; }
+ul { list-style: none; margin-top: 1.5px; }
+li { position: relative; padding-left: 11px; margin-top: 0.8px; }
+li::before { content: ""; position: absolute; left: 1px; top: 0.52em; width: 4.5px; height: 4.5px; border-radius: 1px; background: var(--accent); transform: rotate(45deg); }
+.skills { display: grid; grid-template-columns: 124px 1fr; gap: 2px 9px; align-items: start; }
+.label { white-space: nowrap; font-size: 7.8pt; font-weight: 700; color: var(--accent); background: var(--tint); border-radius: 4px; padding: 1.5px 6px; justify-self: start; line-height: 1.35; }
+.skills div:not(.label) { padding-top: 0.5px; }
+.edu .note { color: var(--muted); }
+.edu .item + .item { margin-top: 2px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="namerow"><h1>Shehbaz <span>Pathan</span></h1>
+  <div class="tagline">AI/ML Engineer | Agents, LLM evaluation, scientific ML</div></div>
+  <div class="contact">
+    <span>New York, NY</span><span class="sep">|</span>
+    <span>(551) 359-9243</span><span class="sep">|</span>
+    <a href="mailto:shehbazp001@gmail.com">shehbazp001@gmail.com</a><span class="sep">|</span>
+    <a href="https://www.linkedin.com/in/shbzpathan">linkedin.com/in/shbzpathan</a><span class="sep">|</span>
+    <a href="https://github.com/shehbaz0101">github.com/shehbaz0101</a>
+  </div>
+</header>
+
+<h2>Summary</h2>
+<p class="summary">AI engineer working on agent evaluation and LLM inference. Built open source benchmarks for speculative decoding on multi step agent traces (spectrace) and for physics ML models (Coticula, PINNForge), and ship a production natural language to robot protocol agent at Opentrons. Research on trajectory level evaluation of enterprise workflow agents.</p>
+
+<h2>Experience</h2>
+<div class="role">
+  <div class="row"><div><span class="title">AI Engineer</span>, <span class="org">Opentrons Labworks Inc. | New York, NY</span></div><div class="date">Aug 2026 to Present</div></div>
+  <ul>
+    <li>Shipped the Phase 0/1 MVP of an agent that turns scientists' plain English requests into runnable Opentrons lab robot protocols (OpenRouter LLM, FastAPI backend, chat UI).</li>
+    <li>Build agentic AI, LLM infrastructure, and RAG pipelines for lab automation in Python, PyTorch, and LangChain/LangGraph.</li>
+    <li>Evaluate agent reliability by testing protocols against scientist requests, catching failures before they reach the robot.</li>
+  </ul>
+</div>
+<div class="role">
+  <div class="row"><div><span class="title">AI Automation Engineer Intern</span>, <span class="org">Rocket Autoparts | Albuquerque, NM (Remote)</span></div><div class="date">Feb 2026 to May 2026</div></div>
+  <ul>
+    <li>Cut order error rates 15% across tracked SKUs with ML forecasting and anomaly detection on fulfillment bottlenecks.</li>
+    <li>Replaced manual handoffs in 3 core supply chain, inventory, and logistics workflows with LLM automation, including parsing unstructured emails and order forms into structured records.</li>
+  </ul>
+</div>
+<div class="role">
+  <div class="row"><div><span class="title">Data Analyst, Automation Intern</span>, <span class="org">BTS | New York, NY</span></div><div class="date">Jun 2025 to Aug 2025</div></div>
+  <ul>
+    <li>Cut report turnaround from 2 days to under 4 hours (about 40% less manual processing) by automating Salesforce reporting and CRM ingestion, deduplication, and enrichment in Python for 5+ client accounts.</li>
+    <li>Built Power BI dashboards on 15+ KPIs, adopted as the permanent leadership reporting layer for 3 consulting engagements.</li>
+  </ul>
+</div>
+<div class="role">
+  <div class="row"><div><span class="title">Data Analyst</span>, <span class="org">Dreamcare Developers Pvt. Ltd. | Pune, India</span></div><div class="date">Jun 2022 to Jan 2024</div></div>
+  <ul>
+    <li>Guided roadmap priorities over 3 product cycles with regression and significance tests on 500K+ row datasets for 10+ clients; saved about 8 analyst hours per week by automating reporting.</li>
+  </ul>
+</div>
+
+<h2>Projects</h2>
+<div class="role">
+  <div class="row"><div><span class="title">pera.ai</span> <span class="stack">| Python, Flask, SQLite, Docker | private repository</span></div></div>
+  <ul>
+    <li>Built a multi agent research terminal for private credit desks: an orchestrator routes to 5 specialist agents, and a deterministic rule based critic scores grounding, timeliness, tool reliability, and citations.</li>
+    <li>Typed tools compute vintage, CDR, and concentration so the LLM never invents a figure; every result is labelled real, synthetic, derived, or customer. About 98% test coverage with pytest and GitHub Actions.</li>
+  </ul>
+</div>
+<div class="role">
+  <div class="row"><div><span class="title">Coticula</span> <span class="stack">| PyTorch, NumPy, SciPy | <a href="https://github.com/shehbaz0101/coticula">github.com/shehbaz0101/coticula</a></span></div></div>
+  <ul>
+    <li>Showed FNO can beat PINO on L2 error while trailing it on PDE residual, using a four exam benchmark (Predict, Conserve, Counterfactual, Explain) on 1D Burgers and 2D heat.</li>
+    <li>Released v0.2.0 with a 48 item rule graded exam and fail closed out of distribution and untrusted input flags.</li>
+  </ul>
+</div>
+<div class="role">
+  <div class="row"><div><span class="title">PINNForge</span> <span class="stack">| PyTorch, FastAPI, Pydantic | <a href="https://github.com/shehbaz0101/pinnforge">github.com/shehbaz0101/pinnforge</a></span></div></div>
+  <ul>
+    <li>Recovered Burgers equation viscosity from 32 sparse sensors more accurately than a closed form estimator, which failed 9 of 30 hard out of distribution cases, using preregistered five seed Fourier neural operator studies.</li>
+    <li>Built a PINN sandbox for harmonic, Burgers, and Poisson equations with a config driven CLI and rate limited API.</li>
+  </ul>
+</div>
+<div class="role">
+  <div class="row"><div><span class="title">spectrace</span> <span class="stack">| Python, pytest, GitHub Actions | <a href="https://github.com/shehbaz0101/spectrace">github.com/shehbaz0101/spectrace</a></span></div></div>
+  <ul>
+    <li>Built an open source benchmark that measures speculative decoding on multi step agent traces instead of chat data, reporting latency, draft accept rate, prefill token growth, and cost per successful task.</li>
+    <li>Designed a two stage acceptance check: the LLM drafts each step and a rule based step grader scores tool success, progress, and abort; a live run accepted 22/22 steps across 5 traces. Free offline mock mode and keyless CI.</li>
+  </ul>
+</div>
+<div class="role">
+  <div class="row"><div><span class="title">SmartBite</span> <span class="stack">| FastAPI, XGBoost, LightGBM | NYC health inspection risk platform</span></div></div>
+  <ul>
+    <li>Reached 87% precision across 5 violation categories at under 200ms latency.</li>
+  </ul>
+</div>
+
+<h2>Skills</h2>
+<div class="skills">
+  <div class="label">Agents and Evaluation</div><div>Agentic AI, LLM and agent evaluation, trajectory level grading, speculative decoding, RAG, vector search, reranking, fine tuning, LangGraph, LangChain</div>
+  <div class="label">Machine Learning</div><div>PyTorch, Hugging Face Transformers, FSDP/DDP, Fourier Neural Operators (FNO/PINO), Physics Informed Neural Networks (PINNs), TensorFlow, scikit-learn, XGBoost, LightGBM</div>
+  <div class="label">Engineering</div><div>Python, SQL, TypeScript, R, FastAPI, Pydantic, pytest, GitHub Actions, CI/CD, AWS (S3, SageMaker), MLflow, PostgreSQL, ChromaDB, MongoDB</div>
+  <div class="label">Analytics</div><div>Statistical modeling, significance testing, A/B testing, time series forecasting, Tableau, Power BI</div>
+</div>
+
+<h2>Education</h2>
+<div class="edu">
+  <div class="item">
+    <div class="row"><div><span class="title">M.S. in Data Analytics and Visualization</span>, <span class="org">Yeshiva University | New York, NY</span></div><div class="date">May 2026</div></div>
+    <div class="note">GPA 4.0/4.0 | Coursework: Machine Learning, Deep Learning, NLP, Time Series, Data Engineering</div>
+  </div>
+  <div class="item">
+    <div class="row"><div><span class="title">B.S. in Computer Applications</span>, <span class="org">BAMU University | Pune, India</span> <span class="note">| GPA 3.8/4.0</span></div><div class="date">May 2022</div></div>
+  </div>
+</div>
+</body>
+</html>
