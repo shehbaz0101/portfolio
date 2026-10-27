@@ -1523,3 +1523,7 @@ summary:focus-visible {outline:3px solid var(--accent);outline-offset:-4px;borde
   .loop-back svg {display:block;height:36px}
   .button {max-width:100%}
 }
+.meta-row {display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px 24px;margin:20px 0 0;padding:16px 20px;border:1px solid var(--line);border-radius:12px;background:var(--canvas)}
+.meta-row>div:first-child {grid-column:1/-1}
+.meta-row dt {font-family:var(--font-mono),monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--secondary)}
+.meta-row dd {margin:4px 0 0;font-size:15px;line-height:1.5;color:var(--ink)}
