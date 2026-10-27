@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 import type { ReactNode } from 'react';
 import { site, ui } from '@/content/site';
 import './globals.css';
+import './fluid.css';
 const inter = localFont({ src: './fonts/inter-var-latin.woff2', weight: '100 900', variable: '--font-inter', display: 'swap' });
 const mono = localFont({ src: './fonts/jetbrains-mono-var-latin.woff2', weight: '100 800', variable: '--font-mono', display: 'swap' });
 const title = `${site.name} | ${site.role}`;
