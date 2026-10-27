@@ -361,6 +361,10 @@ export const projects: Project[] = [
       ],
       "sections": [
         {
+          "title": "Live demo",
+          "body": "The live demo opens on a sign in page. Continue with demo account to explore the console with sample data. It runs on a free host, so the first load can take up to a minute."
+        },
+        {
           "title": "Evaluation set",
           "body": "178 questions in the frozen gold evaluation set."
         }
@@ -369,7 +373,13 @@ export const projects: Project[] = [
         "These are mock mode numbers from committed artifacts, not live model scores. The 37 of 37 means the rubric found no critical issue, not that every answer is correct. Much of the credit and macro data is synthetic and is labelled that way. Nothing it produces is investment advice."
       ]
     },
-    "links": [],
+    "links": [
+      {
+        "label": "Live demo",
+        "href": "https://pera-ai-demo.onrender.com",
+        "note": "Click Continue with demo account to explore with sample data. It runs on a free host, so the first load can take up to a minute."
+      }
+    ],
     "index": "01",
     "summary": "Cited financial research with specialist agents and a deterministic critic.",
     "metrics": [
