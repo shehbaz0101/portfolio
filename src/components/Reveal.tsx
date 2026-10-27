@@ -9,7 +9,7 @@ export function Reveal({ children, className = '', delay = 0 }: { children: Reac
     if (element.getBoundingClientRect().top >= window.innerHeight) element.dataset.reveal = 'waiting';
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) { element.dataset.reveal = 'visible'; observer.disconnect(); }
-    }, { threshold: 0.08 });
+    }, { threshold: 0, rootMargin: '0px 0px 14% 0px' });
     observer.observe(element);
     return () => observer.disconnect();
   }, []);
